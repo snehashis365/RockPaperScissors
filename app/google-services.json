@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "58963036071",
+    "project_id": "rock-paper-scissors-cc1a6",
+    "storage_bucket": "rock-paper-scissors-cc1a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58963036071:android:aab78aaab140d614db9882",
+        "android_client_info": {
+          "package_name": "com.snehashis.rockpaperscissors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58963036071-o6jfcj7hvg70qd6oiv3bsv9hsjot2d7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMTrudzN6KN43iPS0Wnpfq7fB1HKLJtqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58963036071-o6jfcj7hvg70qd6oiv3bsv9hsjot2d7l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,10 +1,13 @@
 package com.snehashis.rockpaperscissors
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_single_player.*
 import kotlin.random.Random
 
+var score = 0
+@SuppressLint("SetTextI18n")
 class SinglePlayer : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +23,7 @@ class SinglePlayer : AppCompatActivity() {
         }
     }
 
-    fun playGame(playerMove : Int) : Int {
+    private fun playGame(playerMove : Int) : Int {
         val botMove = Random.nextInt(3)
         val botString = if (botMove == 0) "Rock" else if (botMove == 1) "Paper" else "Scissors"
         val playerString = if (playerMove == 0) "Rock" else if (playerMove == 1) "Paper" else "Scissors"
@@ -36,7 +39,21 @@ class SinglePlayer : AppCompatActivity() {
             0
     }
 
-    fun updateStatus(result : Int) {
-        gameResult.text = if (result == 0) "You Loose" else if (result == 1) "You Win!!!" else "Tie"
+    private fun updateStatus(result : Int) {
+        when (result) {
+            0 -> {
+                gameResult.text = "You Loose"
+                score -= 30
+            }
+            1 -> {
+                gameResult.text = "You Win!!!"
+                score += 100
+            }
+            else -> {
+                gameResult.text = "Tie"
+                score += 5
+            }
+        }
+        gameScore.text = "Score: $score"
     }
 }
